@@ -22,7 +22,9 @@ html,body {
 .mt_150 {
   margin-top: 150px;
 }
-
+.mb_20{
+	margin-bottom: 20px;
+}
 .panel h4 {
   text-align: center;
 }
@@ -96,7 +98,9 @@ html,body {
   padding-left: 180px;
   transition: all 1s;
 }
-
+.lt-main.now {
+  padding-left: 0;
+}
 .lt-main .lt-topbar{
 	height: 50px;
 	padding: 0 20px;
@@ -116,4 +120,8 @@ html,body {
 .container-fluid{
 	margin-top: 20px;
     overflow: hidden;
+}
+
+table tr td{
+	text-align: center;
 }

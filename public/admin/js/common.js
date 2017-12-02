@@ -24,6 +24,22 @@ $(".child").prev().on("click", function () {
 
 //侧边栏显示与隐藏效果
 $(".icon_menu").on("click", function () {
-  $(".lt_aside").toggleClass("now");
-  $(".lt_main").toggleClass("now");
+  $(".lt-aside").toggleClass("now");
+  
+  $(".lt-main").toggleClass("now");
+});
+
+$(".icon_logout").on("click",function(){
+  $("#logoutModal").modal("show");
+  $(".btn-logout").off().on("clicl",function(){
+    $.ajax({
+      type:"get",
+      url:"/employee/employeeLogout",
+      success:function(data){
+          if(data.success){
+             location.href="login.html";
+          }
+      }
+    });
+  });
 });
